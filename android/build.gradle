@@ -42,8 +42,8 @@ repositories {
 }
 
 dependencies {
-    def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion
-            : project.hasProperty('playServiceVersion') ? project.playServiceVersion : DEFAULT_GOOGLE_PLAY_SERVICES_VERSION
+    def googlePlayServicesAuthVersion = project.hasProperty('googlePlayServicesAuthVersion') ? project.googlePlayServicesAuthVersion
+            : DEFAULT_GOOGLE_PLAY_SERVICES_VERSION
     implementation 'com.facebook.react:react-native:+'
-    implementation "com.google.android.gms:play-services-auth:$googlePlayServicesVersion"
+    implementation "com.google.android.gms:play-services-auth:$googlePlayServicesAuthVersion"
 }
