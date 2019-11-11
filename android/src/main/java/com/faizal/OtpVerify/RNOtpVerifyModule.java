@@ -3,7 +3,6 @@ package com.faizal.OtpVerify;
 
 import android.content.BroadcastReceiver;
 import android.content.IntentFilter;
-import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.facebook.react.bridge.Arguments;
@@ -88,7 +87,7 @@ public class RNOtpVerifyModule extends ReactContextBaseJavaModule implements Lif
 
         task.addOnFailureListener(new OnFailureListener() {
             @Override
-            public void onFailure(@NonNull Exception e) {
+            public void onFailure(Exception e) {
                 Log.e(TAG, "Could not start sms listener", e);
                 promise.reject(e);
             }
